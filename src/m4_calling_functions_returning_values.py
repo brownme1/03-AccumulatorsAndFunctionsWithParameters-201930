@@ -270,7 +270,11 @@ def run_test_fancy_sums_of_digits():
     # your 2nd and 3rd tests but READ THOSE TEST CASES CAREFULLY
     # in the doc-string to be sure that you understand the specification.
     # -------------------------------------------------------------------------
-
+    # Test 1:
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 def fancy_sums_of_digits(n):
     """
@@ -304,7 +308,10 @@ def fancy_sums_of_digits(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-
+    X = n ** 1000
+    Y = n ** 999
+    num = X ** Y
+    return sum_of_digits(num)
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
